@@ -1,0 +1,138 @@
+<!-- Project name: hjhome
+Copyright (C) 2016  hjltu@ya.ru
+https://launchpad.net/hjhome
+
+hjhome is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+hjhome is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css" >
+	<script src="jquery-1.8.2.min.js"></script>
+	<title>Home</title>
+</head>
+<body>
+<div class="head">
+	Hello frend
+	<select id="selectlang">
+		<option>English</option>
+		<option>Русский</option>
+	</select>
+	<input type="button" id="speak" value="Speak">
+</div>
+
+<div class="card" id="myspeak">
+	<input type="button" id="mic" value="Mic" onclick="myMic()"><br>
+	<a id="speaktxt">Output text here</a>
+	<hr>
+</div>
+
+<div class="card">
+	topic :<br>
+	<input type="text" id="topic" value="/home/in/led3">
+	<input type="button" value="ON" onclick="myON()" >
+	<input type="button" value="OFF" onclick="myOFF()" >
+	<br><br>Dimmer 3 :<br>
+	<input type="range" class="slider" id="dimm3" value="50" min="1" max="255" onChange="myDimm3()">
+	<a id="dimmer"></a>
+	<br><br>I/O :
+	<a id="topics">out</a>
+	<a id="payload">out</a>
+	<hr>
+</div>
+
+<div class="card">
+	Temperature 1 :
+	<a id="temp1">temp1</a>
+	<br>
+	<input type="range" class="slider" id="temp1set" value="50" min="10" max="35" onChange="myTemp()">
+	<a id="temp"></a>
+	<br>Heat :
+	<a id="heat13"></a>
+	<br><br>
+	Temperature 2 :
+	<a id="temp2">temp2</a>
+	<hr>
+</div>
+
+<div class="card">
+	PIR Sensor :
+	<a id="ir0">val</a>
+	<hr>
+</div>
+
+<div class="card">
+	Led 3 :
+	<input type="range" class="switch" id="led3" value="0" min="0" max="1" onChange="myLed3()">
+	<br><br>
+	Led 6 :
+	<input type="range" class="switch" id="led6" value="0" min="0" max="1" onChange="myLed6()">
+	<hr>
+</div>
+
+<div class="card">
+	Camera :
+	<input type="range" class="switch" id="cm" value="0" min="0" max="1" onChange="myCam()">
+	<br>
+	<div id="cam"></div>
+	<hr>
+</div>
+
+<div class="card">
+	Reference :
+<br>
+Option automation system in June 2016.
+Technical Overview.
+<br>
+The automation system allows you to control lighting, climate, conduct surveillance, supplement
+protection system (GSM-alarm).
+<br>
+Is a network of devices - a client and a server.
+Customers include controllers based on Arduino or ESP8266, they are used to control various
+devices (buttons, sensors, actuators).
+Server - is a single board computer Rasberry Pi for communication between clients and visualization software.
+<hr>
+The system works on the protocol MQTT (Message Queue Telemetry Transport) - a network protocol that runs over TCP / IP
+developed at IBM. MQTT protocol allows customers to integrate not only within the local network, but also on the Internet.
+Thus it is possible to combine objects located at different locations in a one system.
+<br>
+Visualization is a web-server is created Node.js platform.
+It works in the web-browser on a computer or smartphone. It has a simple and intuitive interface.
+voice control using Google Web Speech API.
+The exchange of information between the server and the browser is on the WebSocket protocol.
+This allows to see in real time the status of all sensors and actuators.
+<hr>
+Feature List:
+Lighting: Turn off all lights by using relays or contactors, and dimming of incandescent lamps
+LED lamps with dimmable 220-volt, dimmable 0-10 volt control.
+<br>
+Climate: proportional temperature control using electric heaters, electric
+underfloor heating, or by means of valves for liquid heating. Air conditioning
+via infrared.
+<br>
+Connected sensors: light, movement, leakage of water, temperature, humidity, reed switches, buttons, and so on.
+<br>
+Connecting to CCTV system: video recorders and IP-cameras support for HTTP MJPEG.
+<br>
+The system is suitable for private homes, apartments, small business facilities.
+<hr>
+</div>
+
+<div class="card"><center>
+	<a href="https://launchpad.net/hjhome">lp:hjhome</a></center><hr></div>
+
+</body>
+<script src="index.js"></script>
+</html>
