@@ -23,10 +23,10 @@ Change mqtt adress in server.js and websocket adress in index.js
 run: node server.js
 
 #	arduino-mqtt-client
-This folder contain projects for arduino ide and some librares
-web-mqtt-client this project for anoninous mqtt server
-webmqtt-dioty-cloudmqtt for dioty.co or cloudmqtt.com
+This folder contain projects for arduino ide and some librares, 
+web-mqtt-client this project for anonimous mqtt server, 
+webmqtt-dioty-cloudmqtt for dioty.co or cloudmqtt.com, 
 iot old project for arduino mega
 
 # arduino+nodered
-Sketch for arduino and json for nore-red.
+Sketch for arduino and json for node-red.
