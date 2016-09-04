@@ -1,6 +1,8 @@
 # hjhome
 Home automation system (arduino,node.js)
 
+https://www.youtube.com/playlist?list=PLPgySVOFOYDQU_b3lny9g3SBTuuV2YO6m
+
 Project name: hjhome
 Copyright (C) 2016  hjltu@ya.ru
 https://launchpad.net/hjhome
