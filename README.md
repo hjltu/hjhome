@@ -1,4 +1,4 @@
-# hjhome
+# hjhome https://launchpad.net/hjhome
 Home automation system (arduino,node.js)
 
 https://www.youtube.com/playlist?list=PLPgySVOFOYDQU_b3lny9g3SBTuuV2YO6m
