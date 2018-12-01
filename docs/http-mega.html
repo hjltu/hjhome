@@ -1,0 +1,115 @@
+
+    ArduinoMEGA MQTT client
+
+------------------------------------------------------------------------
+Name:	mega11
+IP address:	192.168.0.11
+MAC address:	aa:bb:cc:dd:ee:f1
+MQTT Server:	192.168.0.10
+
+------------------------------------------------------------------------
+Commands: / mega11/in/command)
+echo,test,ip,mac,srv,info,reset
+default,http,state,shutters,term, sensor1,sensor2,period,gap,count,button
+Commands descriptions:
+
+
+default - not available
+http - web server
+state - save rele and pwm state after power off
+shutter - set 22-23,24-25,26-27,28-29 rele for shutters
+term - set 46-49 rele for temp18-21<10℃ if period=1
+sensor1 - set temp14-17: 1 for DHT22, 0 for ds18b20
+sensor2 - set temp18-21: 1 for DHT22, 0 for ds18b20
+period - send temp,hum stat periodically
+gap - interval for temp,hum,(an) 6(2)sec-30(5)min
+button - set 54-60 inputs: 1 for buttons, 0 for analog input
+count - counter for bt61-69
+
+
+topic: /mega11/out/ip
+payload: 192.168.0.11
+
+------------------------------------------------------------------------
+
+Pin	I/O 	Topic	Payload	Status
+D2	Pwm	/mega11/out/pwm2	0-255	255
+D3	Pwm	/mega11/out/pwm3	0-255	255
+D4	Pwm	/mega11/out/pwm4	0-255	25
+D5	Pwm	/mega11/out/pwm5	0-255	25
+D6	Pwm	/mega11/out/pwm6	0-255	25
+D7	Pwm	/mega11/out/pwm7	0-255	25
+D8	Pwm	/mega11/out/pwm8	0-255	25
+D9	Pwm	/mega11/out/pwm9	0-255	80
+D10	Network		W5100	
+D11	Pwm	/mega11/out/pwm11	0-255	25
+D12	Pwm	/mega11/out/pwm12	0-255	255
+D13	Pwm	/mega11/out/pwm13	0-255	25
+D14	ds18b20	/mega11/out/temp14	℃	0℃
+D15	ds18b20	/mega11/out/temp15	℃	0℃
+D16	ds18b20	/mega11/out/temp16	℃	-127℃
+D17	ds18b20	/mega11/out/temp17	℃	0℃
+D18	DHT	/mega11/out/temp18,hum18	℃,%	0℃,0%
+D19	DHT	/mega11/out/temp19,hum19	℃,%	0℃,0%
+D20	DHT	/mega11/out/temp20,hum20	℃,%	0℃,0%
+D21	DHT	/mega11/out/temp21,hum21	℃,%	0℃,0%
+D22	Rele	/mega11/out/rele22	0,1	1
+D23	Rele	/mega11/out/rele23	0,1	1
+D24	Rele	/mega11/out/rele24	0,1	1
+D25	Rele	/mega11/out/rele25	0,1	1
+D26	Rele	/mega11/out/rele26	0,1	1
+D27	Rele	/mega11/out/rele27	0,1	1
+D28	Rele	/mega11/out/rele28	0,1	1
+D29	Rele	/mega11/out/rele29	0,1	1
+D30	Rele	/mega11/out/rele30	0,1	1
+D31	Rele	/mega11/out/rele31	0,1	1
+D32	Rele	/mega11/out/rele32	0,1	1
+D33	Rele	/mega11/out/rele33	0,1	1
+D34	Rele	/mega11/out/rele34	0,1	1
+D35	Rele	/mega11/out/rele35	0,1	1
+D36	Rele	/mega11/out/rele36	0,1	1
+D37	Rele	/mega11/out/rele37	0,1	1
+D38	Rele	/mega11/out/rele38	0,1	1
+D39	Rele	/mega11/out/rele39	0,1	1
+D40	Rele	/mega11/out/rele40	0,1	1
+D41	Rele	/mega11/out/rele41	0,1	1
+D42	Rele	/mega11/out/rele42	0,1	1
+D43	Rele	/mega11/out/rele43	0,1	1
+D44	Rele	/mega11/out/rele44	0,1	1
+D45	Rele	/mega11/out/rele45	0,1	1
+D46	Rele	/mega11/out/rele46	0,1	1
+D47	Rele	/mega11/out/rele47	0,1	1
+D48	Rele	/mega11/out/rele48	0,1	1
+D49	Rele	/mega11/out/rele49	0,1	1
+D50-D53			W5100	
+A0, D54	Button	/mega11/out/bt54	0,1,2	0
+A1, D55	Button	/mega11/out/bt55	0,1,2	0
+A2, D56	Button	/mega11/out/bt56	0,1,2	0
+A3, D57	Button	/mega11/out/bt57	0,1,2	0
+A4, D58	Button	/mega11/out/bt58	0,1,2	0
+A5, D59	Button	/mega11/out/bt59	0,1,2	0
+A6, D60	Button	/mega11/out/bt60	0,1,2	0
+A7, D61	Button	/mega11/out/bt61	0,1,2	0
+A8, D62	Button	/mega11/out/bt62	0,1,2	0
+A9, D63	Button	/mega11/out/bt63	0,1,2	0
+A10, D64	Button	/mega11/out/bt64	0,1,2	0
+A11, D65	Button	/mega11/out/bt65	0,1,2	0
+A12, D66	Button	/mega11/out/bt66	0,1,2	0
+A13, D67	Button	/mega11/out/bt67	0,1,2	0
+A14, D68	Button	/mega11/out/bt68	0,1,2	0
+A15, D69	Button	/mega11/out/bt69	0,1,2	0
+EEPROM	default	/ mega11/in/default	1,0	1
+EEPROM	http	/ mega11/in/http	1,0	1
+EEPROM	state	/ mega11/in/state	1,0	1
+EEPROM	shutter	/ mega11/in/shutter	1,0	0
+EEPROM	term	/ mega11/in/term	1,0	0
+EEPROM	sensor1	/ mega11/in/sensor1	1,0	0
+EEPROM	sensor2	/ mega11/in/sensor2	1,0	1
+EEPROM	period	/ mega11/in/period	1,0	1
+EEPROM	gap	/ mega11/in/gap	1,0	9
+EEPROM	count	/ mega11/in/count	1,0	0
+EEPROM	button	/ mega11/in/button	1,0	1
+
+------------------------------------------------------------------------
+hjhome <https://github.com/hjltu/hjhome> 06-Mar-16 - 30-Nov-18
+
