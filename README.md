@@ -6,7 +6,7 @@ remote monitoring system
 
 # my home automation devices
 1. wifi controller(wemos):
-<img src="img/wemos.jpg" width="48">
+<img src="img/wemos.jpg" width="200">
 
 2. lan controller(arduino mega):
 ![Alt Text](img/mega.jpg)
