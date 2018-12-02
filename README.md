@@ -6,13 +6,13 @@ remote monitoring system
 
 # my home automation devices
 1. wifi controller(wemos):
-<img src="img/wemos.jpg" width="200">
+<img src="img/wemos.jpg" width="500">
 
 2. lan controller(arduino mega):
-![Alt Text](img/mega.jpg)
+<img src="img/mega.jpg" width="500">
 
 3. pwm dimmer 3.3v/5v (arduino pro mini)
-![Alt Text](img/pwm-dimmer.jpg)
+<img src="img/pwm-dimmer.jpg" width="500">
 
 4. 28 channel solid-state relay (BT-139)
-![Alt Text](img/28-channel.jpg)
+<img src="img/28-channel.jpg" width="500">
