@@ -2,7 +2,7 @@
 https://github.com/hjltu/hjmqtt
 
 # hjconnect
-remote monitoring system
+remote telemetry system  for raspberry pi
 
 # my home automation devices
 1. wifi controller(wemos): https://github.com/hjltu/hjhome/docs/http-wemos.html
