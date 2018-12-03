@@ -41,7 +41,7 @@ As result of this step controller should connect to your network
 (If You linux user use winit.sh script for this:
 ./winit.sh 192.168.0.10 "Your Name" "Your SSID" "Your Password" "Your MQTT Server IP")
 
-IF You not lost controller, connect bt1 and bt2 to the GND for 20 seconds to restore default settings.
+IF You lost controller, connect bt1 and bt2 to the GND for 20 seconds to restore default settings.
 
 # Now You can setup EEPROM settings.
 
