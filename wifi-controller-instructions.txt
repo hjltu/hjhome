@@ -73,10 +73,11 @@ Setup for usual using:
 /wemos2/in/default		0
 
 
-# I / O port notation:
+# I / O port reference:
 
 bt1,2   input for buttons (between bt and GND)
 ds      input for ds18b20 sensor (temperature sensor).
 DHT     input for DHT22 (temperature, humidity sensor).
+A0      analog input for any analog devices.
 p1,2    pwm outputs.
 L1,2    triac outputs (220 volt).
