@@ -6,6 +6,7 @@ remote telemetry system  for raspberry pi
 
 # my home automation devices
 1. wifi controller(wemos): https://github.com/hjltu/hjhome/blob/master/docs/http-wemos.html
+https://www.ebay.com/itm/253763472195
 <img src="img/wemos.jpg" width="500">
 
 2. lan controller(arduino mega): https://github.com/hjltu/hjhome/blob/master/docs/http-mega.html
