@@ -46,3 +46,7 @@ A0-A6            analog input for any analog devices.
 D2-D9,D11-D13    pwm outputs.
 D22-D49          triac outputs (220 volt).
 D10,D50-D53      lan network W5100
+
+# test:
+mosquitto_sub -h 79.110.246.131 -p 18830 -t /# -v
+mosquitto_pub -h 79.110.246.131 -p 18830 -t /mega11/in/echo -m hello! 
