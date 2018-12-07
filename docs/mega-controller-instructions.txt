@@ -23,3 +23,26 @@ period - send temp,hum stat periodically
 gap - interval for temp,hum,(an) 6(2)sec-30(5)min
 button - set 54-60 inputs: 1 for buttons, 0 for analog input
 count - counter for bt61-69
+
+Setup for usual using:
+/mega11/in/state		1
+/mega11/in/period		0
+/mega11/in/http		    1
+/mega11/in/shutters		0
+/mega11/in/buttons		1
+/mega11/in/term		    0
+/mega11/in/count		0
+/mega11/in/gap		    5
+/mega11/in/sensor1		0
+/mega11/in/sensor1		1
+
+
+# I / O port reference:
+
+A0-A16           input for buttons (between bt and GND)
+D14-D21          input for ds18b20 sensor (temperature sensor).
+D14-D21          input for DHT22 (temperature, humidity sensor).
+A0-A6            analog input for any analog devices.
+D2-D9,D11-D13    pwm outputs.
+D22-D49          triac outputs (220 volt).
+D10,D50-D53      lan network W5100
