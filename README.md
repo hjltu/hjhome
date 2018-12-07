@@ -8,11 +8,13 @@ remote telemetry system  for raspberry pi
 <br>
 <b>1. wifi controller(wemos)</b>
 <br>https://github.com/hjltu/hjhome/blob/master/docs/http-wemos.html
+<br>https://github.com/hjltu/hjhome/blob/master/docs/wifi-controller-instructions.txt
 <br>https://www.ebay.com/itm/253763472195
 <br><img src="img/wemos.jpg" width="500">
 <br>
 <b>2. lan controller(arduino mega)</b>
 <br>https://github.com/hjltu/hjhome/blob/master/docs/http-mega.html
+<br>https://github.com/hjltu/hjhome/blob/master/docs/mega-controller-instructions.txt
 <br>https://www.ebay.com/itm/254015934717
 <br><img src="img/mega.jpg" width="500">
 test: 
