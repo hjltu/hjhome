@@ -15,7 +15,7 @@ remote telemetry system  for raspberry pi
 <br>https://github.com/hjltu/hjhome/blob/master/docs/http-mega.html
 <br>https://www.ebay.com/itm/254015934717
 <br><img src="img/mega.jpg" width="500">
-<br>test: 
+test: 
 <br>mosquitto_sub -h 79.110.246.131 -p 18830 -t /# -v
 <br>mosquitto_pub -h 79.110.246.131 -p 18830 -t /mega11/in/echo -m hello!
 <br>
