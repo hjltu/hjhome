@@ -10,7 +10,11 @@ remote telemetry system  for raspberry pi
 <img src="img/wemos.jpg" width="500">
 
 2. lan controller(arduino mega): https://github.com/hjltu/hjhome/blob/master/docs/http-mega.html
+<br>https://www.ebay.com/itm/254015934717
 <img src="img/mega.jpg" width="500">
+test: 
+mosquitto_sub -h 79.110.246.131 -p 18830 -t /# -v
+mosquitto_pub -h 79.110.246.131 -p 18830 -t /mega11/in/echo -m hello!
 
 3. pwm dimmer 3.3v/5v, 1kHz min (arduino pro mini)
 <img src="img/pwm-dimmer.jpg" width="500">
