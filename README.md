@@ -19,7 +19,7 @@ remote telemetry system  for raspberry pi
 <br>mosquitto_sub -h 79.110.246.131 -p 18830 -t /# -v
 <br>mosquitto_pub -h 79.110.246.131 -p 18830 -t /mega11/in/echo -m hello!
 <br>
-<b>3. pwm dimmer 3.3v/5v, 1kHz min (arduino pro mini)</b>
+<br><b>3. pwm dimmer 3.3v/5v, 1kHz min (arduino pro mini)</b>
 <br><img src="img/pwm-dimmer.jpg" width="500">
 <br>
 <b>4. 28 channel solid-state relay (BT-139)</b>
