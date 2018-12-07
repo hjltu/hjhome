@@ -19,7 +19,7 @@ remote telemetry system  for raspberry pi
 <br><img src="img/mega.jpg" width="500">
 test: 
 <br>mosquitto_sub -h test.mosquitto.org -t /mega11/# -v
-<br>mosquitto_pub -h test.mosquitto.org-t /mega11/in/echo -m hello!
+<br>mosquitto_pub -h test.mosquitto.org -t /mega11/in/echo -m hello!
 <br>
 <br><b>3. pwm dimmer 3.3v/5v, 1kHz min (arduino pro mini)</b>
 <br><img src="img/pwm-dimmer.jpg" width="500">
