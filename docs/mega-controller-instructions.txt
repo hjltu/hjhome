@@ -48,5 +48,5 @@ D22-D49          triac outputs (220 volt).
 D10,D50-D53      lan network W5100
 
 # test:
-mosquitto_sub -h 79.110.246.131 -p 18830 -t /# -v
-mosquitto_pub -h 79.110.246.131 -p 18830 -t /mega11/in/echo -m hello! 
+mosquitto_sub -h test.mosquitto.org -t /mega11/# -v
+mosquitto_pub -h test.mosquitto.org -t /mega11/in/echo -m hello! 
