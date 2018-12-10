@@ -1,5 +1,6 @@
 # hjmqtt
 https://github.com/hjltu/hjmqtt
+<br> MQTT client, bridge between my mqtt devices and other systems, like homekit2mqtt, Homeassistant, OpenHUB etc.
 
 # hjconnect
 remote telemetry system  for raspberry pi
