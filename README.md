@@ -25,9 +25,9 @@ test:
 <br>mosquitto_pub -h test.mosquitto.org -t /mega11/in/echo -m hello!
 <br>
 <br><b>3. Triac dimmer ~220v, PWM 3.3v/5v, 1kHz min (arduino pro mini)</b>
-<br><img src="img/pwm-dimmer.jpg" width="500">
 <br>https://youtu.be/Dj-iw9Rz5CE
 <br>https://www.ebay.com/itm/254046916040
+<br><img src="img/pwm-dimmer.jpg" width="500">
 <br><br>
 <b>4. 28 channel solid-state relay (BT-139)</b>
 <br><img src="img/28-channel.jpg" width="500">
