@@ -11,6 +11,7 @@ https://github.com/hjltu/hjconnect
 <b>1. wifi controller(wemos)</b>
 <br>https://github.com/hjltu/hjhome/blob/master/docs/http-wemos.html
 <br>https://github.com/hjltu/hjhome/blob/master/docs/wifi-controller-instructions.txt
+<br>https://youtu.be/PPkzPMNiBQY
 <br>https://www.ebay.com/itm/253763472195
 <br><img src="img/wemos.jpg" width="500">
 <br>
@@ -23,8 +24,10 @@ test:
 <br>mosquitto_sub -h test.mosquitto.org -t /mega11/# -v
 <br>mosquitto_pub -h test.mosquitto.org -t /mega11/in/echo -m hello!
 <br>
-<br><b>3. pwm dimmer 3.3v/5v, 1kHz min (arduino pro mini)</b>
+<br><b>3. Triac dimmer ~220v, PWM 3.3v/5v, 1kHz min (arduino pro mini)</b>
 <br><img src="img/pwm-dimmer.jpg" width="500">
+<br>https://youtu.be/Dj-iw9Rz5CE
+<br>https://www.ebay.com/itm/254046916040
 <br>
 <b>4. 28 channel solid-state relay (BT-139)</b>
 <br><img src="img/28-channel.jpg" width="500">
