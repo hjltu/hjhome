@@ -28,6 +28,6 @@ test:
 <br><img src="img/pwm-dimmer.jpg" width="500">
 <br>https://youtu.be/Dj-iw9Rz5CE
 <br>https://www.ebay.com/itm/254046916040
-<br>
+<br><br>
 <b>4. 28 channel solid-state relay (BT-139)</b>
 <br><img src="img/28-channel.jpg" width="500">
