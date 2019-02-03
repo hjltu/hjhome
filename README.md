@@ -27,6 +27,7 @@ test:
 <br><b>3. Triac dimmer ~220v, PWM 3.3v/5v, 1kHz min (arduino pro mini)</b>
 <br>https://youtu.be/Dj-iw9Rz5CE
 <br>https://www.ebay.com/itm/254046916040
+<br>https://github.com/hjltu/hjmqtt/blob/master/pwm_to_dimm.ino
 <br><img src="img/pwm-dimmer.jpg" width="500">
 <br><br>
 <b>4. 28 channel solid-state relay (BT-139)</b>
