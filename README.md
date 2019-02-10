@@ -26,6 +26,14 @@ https://github.com/hjltu/hjconnect
 <br>https://github.com/hjltu/hjhome/blob/master/docs/http-mega.html
 <br>https://github.com/hjltu/hjhome/blob/master/docs/mega-controller-instructions.txt
 <br>https://www.ebay.com/itm/254015934717
+<br><b>I/O port reference:</b>
+<br>A0-A16           input for buttons (between bt and GND)
+<br>D14-D21          input for ds18b20 sensor (temperature sensor).
+<br>D14-D21          input for DHT22 (temperature, humidity sensor).
+<br>A0-A6            analog input for any analog devices.
+<br>D2-D9,D11-D13    pwm outputs.
+<br>D22-D49          triac outputs (220 volt).
+<br>D10,D50-D53      lan network W5100
 <br><img src="img/mega.jpg" width="500">
 test: 
 <br>mosquitto_sub -h test.mosquitto.org -t /mega11/# -v
