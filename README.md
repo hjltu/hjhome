@@ -17,11 +17,11 @@ https://github.com/hjltu/hjconnect
 # I/O port reference:
 
 bt1,2   input for buttons (short ang long press) with impulse counter.
-ds      input for ds18b20 sensor (temperature sensor).
-DHT     input for DHT22 (temperature, humidity sensor).
-A0      analog input for any analog devices(CO,CO2,luminosity).
-p1,2    pwm outputs, for dimmers and motorizer curtains control(Somfy) 
-L1,2    triac outputs, AC current (light, jalousie).
+<br>ds      input for ds18b20 sensor (temperature sensor).
+<br>DHT     input for DHT22 (temperature, humidity sensor).
+<br>A0      analog input for any analog devices(CO,CO2,luminosity).
+<br>p1,2    pwm outputs, for dimmers and motorizer curtains control(Somfy) 
+<br>L1,2    triac outputs, AC current (light, jalousie).
 <br><img src="img/wemos.jpg" width="500">
 <br>
 <b>2. lan controller(arduino mega)</b>
