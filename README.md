@@ -13,6 +13,15 @@ https://github.com/hjltu/hjconnect
 <br>https://github.com/hjltu/hjhome/blob/master/docs/wifi-controller-instructions.txt
 <br>https://youtu.be/PPkzPMNiBQY
 <br>https://www.ebay.com/itm/253763472195
+
+# I/O port reference:
+
+bt1,2   input for buttons (short ang long press) with impulse counter.
+ds      input for ds18b20 sensor (temperature sensor).
+DHT     input for DHT22 (temperature, humidity sensor).
+A0      analog input for any analog devices(CO,CO2,luminosity).
+p1,2    pwm outputs, for dimmers and motorizer curtains control(Somfy) 
+L1,2    triac outputs, AC current (light, jalousie).
 <br><img src="img/wemos.jpg" width="500">
 <br>
 <b>2. lan controller(arduino mega)</b>
