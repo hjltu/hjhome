@@ -13,9 +13,7 @@ https://github.com/hjltu/hjconnect
 <br>https://github.com/hjltu/hjhome/blob/master/docs/wifi-controller-instructions.txt
 <br>https://youtu.be/PPkzPMNiBQY
 <br>https://www.ebay.com/itm/253763472195
-
-# I/O port reference:
-
+<b>I/O port reference:</b>
 bt1,2   input for buttons (short ang long press) with impulse counter.
 <br>ds      input for ds18b20 sensor (temperature sensor).
 <br>DHT     input for DHT22 (temperature, humidity sensor).
