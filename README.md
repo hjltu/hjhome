@@ -39,11 +39,11 @@ test:
 <br>mosquitto_sub -h test.mosquitto.org -t /mega11/# -v
 <br>mosquitto_pub -h test.mosquitto.org -t /mega11/in/echo -m hello!
 <br>
-<br><b>3. Triac dimmer ~220v, PWM 3.3v/5v, 1kHz min (arduino pro mini)</b>
+<br><b>3. Triac dimmer, PWM input 3.3v/5v, 1kHz min.</b>
 <br>https://youtu.be/Dj-iw9Rz5CE
 <br>https://www.ebay.com/itm/254046916040
 <br>https://github.com/hjltu/hjhome/blob/master/prog/pwm_to_dimm.ino
 <br><img src="img/pwm-dimmer.jpg" width="500">
 <br><br>
-<b>4. 28 channel solid-state relay (BT-139)</b>
+<b>4. 28 channel solid-state relay (triac BT-139)</b>
 <br><img src="img/28-channel.jpg" width="500">
