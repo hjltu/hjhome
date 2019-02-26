@@ -9,7 +9,7 @@ https://github.com/hjltu/hjconnect
 # my home automation devices
 <br>
 <b>1. wifi controller(wemos)</b>
-<br>https://github.com/hjltu/hjhome/blob/master/docs/http-wemos.html
+<br>https://github.com/hjltu/hjmqtt/tree/master/arduino
 <br>https://github.com/hjltu/hjhome/blob/master/docs/wifi-controller-instructions.txt
 <br>https://youtu.be/PPkzPMNiBQY
 <br>https://www.ebay.com/itm/253763472195
@@ -23,7 +23,7 @@ https://github.com/hjltu/hjconnect
 <br><img src="img/wemos.jpg" width="500">
 <br>
 <b>2. lan controller(arduino mega)</b>
-<br>https://github.com/hjltu/hjhome/blob/master/docs/http-mega.html
+<br>https://github.com/hjltu/hjmqtt/tree/master/arduino
 <br>https://github.com/hjltu/hjhome/blob/master/docs/mega-controller-instructions.txt
 <br>https://www.ebay.com/itm/254015934717
 <br><b>I/O port reference:</b>
@@ -42,7 +42,7 @@ test:
 <br><b>3. Triac dimmer, PWM input 3.3v/5v, 1kHz min.</b>
 <br>https://youtu.be/Dj-iw9Rz5CE
 <br>https://www.ebay.com/itm/254046916040
-<br>https://github.com/hjltu/hjhome/blob/master/prog/pwm_to_dimm.ino
+<br>https://github.com/hjltu/hjmqtt/tree/master/arduino
 <br><img src="img/pwm-dimmer.jpg" width="500">
 <br><br>
 <b>4. 28 channel solid-state relay (triac BT-139)</b>
