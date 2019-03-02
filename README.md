@@ -6,6 +6,11 @@ https://github.com/hjltu/hjmqtt
 https://github.com/hjltu/hjconnect
 <br> Remote telemetry system  for raspberry pi
 
+# sima
+https://github.com/hjltu/sima
+<br>Yandex voice assistant for home automation control
+<br>https://youtu.be/XiIFVnCSt-M
+
 # my home automation devices
 <br>
 <b>1. wifi controller(wemos)</b>
