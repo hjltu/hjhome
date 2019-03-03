@@ -15,7 +15,7 @@ https://github.com/hjltu/sima
 <br>
 <b>1. wifi controller(wemos)</b>
 <br>https://github.com/hjltu/hjmqtt/tree/master/arduino
-<br>https://github.com/hjltu/hjhome/blob/master/docs/wifi-controller-instructions.txt
+<br>https://github.com/hjltu/hjmqtt/arduino/doc/wifi-controller-instruction.txt
 <br>https://youtu.be/PPkzPMNiBQY
 <br>https://www.ebay.com/itm/253763472195
 <br><b>I/O port reference:</b>
@@ -29,7 +29,7 @@ https://github.com/hjltu/sima
 <br>
 <b>2. lan controller(arduino mega)</b>
 <br>https://github.com/hjltu/hjmqtt/tree/master/arduino
-<br>https://github.com/hjltu/hjhome/blob/master/docs/mega-controller-instructions.txt
+<br>https://github.com/hjltu/hjmqtt/arduino/doc/mega-controller-instructions.txt
 <br>https://www.ebay.com/itm/254015934717
 <br><b>I/O port reference:</b>
 <br>A0-A16           input for buttons (between bt and GND)
