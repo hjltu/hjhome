@@ -3,7 +3,7 @@ https://github.com/hjltu/hjmqtt
 <br> MQTT client, bridge between my mqtt devices and other systems, like homekit2mqtt, Homeassistant, OpenHUB etc.
 
 **more documents and instructions**
-https://github.com/OSA83/hjhome
+https://github.com/OSA83/hjhome-doc
 
 # hjconnect
 https://github.com/hjltu/hjconnect
