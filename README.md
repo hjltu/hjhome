@@ -20,7 +20,7 @@ https://github.com/hjltu/sima
 <br>https://github.com/hjltu/hjmqtt/tree/master/arduino
 <br>https://github.com/hjltu/hjmqtt/tree/master/arduino/doc
 <br>https://youtu.be/PPkzPMNiBQY
-<br>https://www.ebay.com/itm/253763472195
+<br>https://www.ebay.com/itm/254534654473
 <br><b>I/O port reference:</b>
 <br>bt1,2   input for buttons (short ang long press) with impulse counter.
 <br>ds      input for ds18b20 sensor (temperature sensor).
