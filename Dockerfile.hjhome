@@ -1,0 +1,27 @@
+
+# docker pull alpine
+# docker build -f Dockerfile.hjhome -t hjhome .
+# docker run -ti --rm alpine/hjmqtt sh
+# docker run -p 1881:1880 --rm alpine/hjmqtt node-red
+
+FROM alpine
+RUN apk update \
+    && apk add curl vim
+# python3
+RUN apk --no-cache add py3-setuptools && pip3 install paho-mqtt flask \
+    && pip3 install --upgrade werkzeug==0.15.2
+# nodejs
+RUN apk --no-cache add dbus nodejs npm \
+    avahi avahi-compat-libdns_sd avahi-dev
+RUN npm install -g homebridge --unsafe-perm
+# node-red
+RUN npm install -g node-red --unsafe-perm
+RUN mkdir -p /root/.node-red
+WORKDIR /root/.node-red
+RUN npm install -g node-red-dashboard \
+    node-red-contrib-sonos node-red-contrib-knx
+WORKDIR /root
+#COPY hjmqtt.tgz .
+#RUN tar xzf hjmqtt.tgz
+#CMD [ "python3", "hjlqtt/hjmqtt.py" ]
+#CMD ["node-red-pi","-v","--max-old-space-size=512","flow.json"]
