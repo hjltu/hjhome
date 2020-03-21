@@ -1,0 +1,31 @@
+
+# docker pull alpine
+# docker build -f Dockerfile.hjhome -t hjhome .
+# docker save -o hjhome.tar hjhome
+# docker load -i hjhome.tar
+# docker run -ti --rm hjhome sh
+# docker run -p 1881:1880 --rm hjhome node-red
+# docker run --network=host --rm homekit homekit2mqtt -u mqtt://192.168.0.10
+
+FROM node:10-alpine
+USER root
+RUN apk update \
+    && apk add mosquitto mosquitto-clients curl make g++ gcc
+# python3
+#RUN apk add py3-setuptools py3-psutil && pip3 install paho-mqtt flask \
+#    && pip3 install --upgrade werkzeug==0.15.2
+# nodejs
+RUN apk --no-cache add npm avahi avahi-compat-libdns_sd avahi-dev
+RUN npm install -g homekit2mqtt --unsafe-perm
+# node-red
+RUN npm install -g node-red --unsafe-perm
+RUN mkdir -p /root/.node-red
+WORKDIR /root/.node-red
+RUN npm install -g node-red-dashboard \
+    node-red-contrib-sonos node-red-contrib-knx
+WORKDIR /root
+#COPY hjmqtt.tgz .
+#RUN tar xzf hjmqtt.tgz
+#CMD [ "python3", "hjlqtt/hjmqtt.py" ]
+#CMD [ "mosquitto" ]
+#CMD ["node-red-pi","-v","--max-old-space-size=512","flow.json"]
