@@ -4,6 +4,8 @@
 <br>`cd hjhome`
 <br>`git clone --single-branch --branch testing https://github.com/hjltu/hjmqtt.git`
 <br>`git clone --single-branch --branch master https://github.com/hjltu/hjsite.git`
+<br>`git clone --single-branch --branch master https://github.com/hjltu/hjhomekit.git`
+<br>`git clone --single-branch --branch master https://github.com/hjltu/hjnode-red.git`
 <br>`git clone --single-branch --branch testing https://github.com/hjltu/hjconnect.git`
 ### Config:
 **Accessory file:**
@@ -44,3 +46,10 @@
 >`docker run -d --rm --name=hjnode-red -v "$(pwd)"/my/config:/root/config hjnode-red`
 <br>or
 <br>`docker run -d --restart=always --name=hjnode-red -v "$(pwd)"/my/config:/root/config hjnode-red`
+## hjconnect
+### Build:
+>`docker build -f Docker.hjconnect -t hjconnect .`
+### Run:
+>`docker run -d --rm --name=hjconnect -v "$(pwd)"/my/config:/root/config hjconnect`
+<br>or
+<br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/my/config:/root/config hjconnect`

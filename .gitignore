@@ -4,5 +4,6 @@ hjsite/
 hjmqtt/
 hjhomekit/
 hjnode-red/
+hjconnect/
 config/0*.csv
 instance/*.*

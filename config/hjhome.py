@@ -30,6 +30,9 @@ hjsite.myemail.py
 # hjmqtt
 MQTT_SERVER = '172.17.0.1'
 VERSION = '5-Apr-20'
+# hjconnect
+REMOTE_MQTT_SERVER = 'test.mosquitto.org'
+REMOTE_MQTT_PORT = 1883
 # hjsite
 SMTP_SERVER = 'smtp.example.com'
 SMTP_PORT = 465
