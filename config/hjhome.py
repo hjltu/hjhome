@@ -27,8 +27,12 @@ DEALINGS IN THE SOFTWARE.
 hjsite.myemail.py
 """
 
+# hjmqtt
+MQTT_SERVER = '172.17.0.1'
+VERSION = '5-Apr-20'
+# hjsite
 SMTP_SERVER = 'smtp.example.com'
 SMTP_PORT = 465
 FROM_EMAIL = 'email@example.com'
 FROM_EMAIL_PASSWD = 'password'
-TO_EMAILS = ['email@example.org', '2email@example.org']
+TO_EMAILS = ['email@example.org', 'email_2@example.org']

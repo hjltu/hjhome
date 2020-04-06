@@ -3,4 +3,6 @@ __pycache__/
 hjsite/
 hjmqtt/
 hjhomekit/
+hjnode-red/
+config/0*.csv
 instance/*.*

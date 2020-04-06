@@ -11,11 +11,12 @@
 <br>SERIAL: Rpi serial number (/proc/cpuinfo)
 <br>default csv file: setup/default.csv
 <br>documentation: https://github.com/OSA83/hjhome-doc
-## hjmqtt
+
 **Configuration file:**
-<br>config/hjmqtt.py
+<br>config/hjhome.py
 <br>MQTT_SERVER: mqtt server IP address
 <br>VERSION: version string
+## hjmqtt
 ### Build:
 >`docker build -f Docker.hjmqtt -t hjmqtt .`
 ### Run:
@@ -23,14 +24,23 @@
 <br>or
 <br>`docker run -d --restart=always --name=hjmqtt -v "$(pwd)"/my/config:/root/config hjmqtt`
 ## hjsite
-**Configuration file:**
-<br>config/hjsite.py
-<br>MQTT_SERVER: mqtt server IP address
-<br>VERSION: version string
 ### Build:
 >`docker build -f Docker.hjsite -t hjsite .`
 ### Run:
 >`docker run -d --rm --name=hjsite -v "$(pwd)"/my/config:/root/config hjsite`
 <br>or
 <br>`docker run -d --restart=always --name=hjsite -v "$(pwd)"/my/config:/root/config hjsite`
-## homekit
+## hjhomekit
+### Build:
+>`docker build -f Docker.hjhomekit -t hjhomekit .`
+### Run:
+>`docker run -d --rm --name=hjhomekit -v "$(pwd)"/my/config:/root/config hjhomekit`
+<br>or
+<br>`docker run -d --restart=always --name=hjhomekit -v "$(pwd)"/my/config:/root/config hjhomekit`
+## hjnode-red
+### Build:
+>`docker build -f Docker.hjnode-red -t hjnode-red .`
+### Run:
+>`docker run -d --rm --name=hjnode-red -v "$(pwd)"/my/config:/root/config hjnode-red`
+<br>or
+<br>`docker run -d --restart=always --name=hjnode-red -v "$(pwd)"/my/config:/root/config hjnode-red`
