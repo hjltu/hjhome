@@ -5,7 +5,7 @@ https://github.com/hjltu/hjmqtt
 **more documents and instructions**
 https://github.com/OSA83/hjhome-doc
 
-**new version** &#1f913;
+**new version** ☺️
 <br> see branch: testing
 
 # hjconnect
