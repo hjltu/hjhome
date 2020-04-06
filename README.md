@@ -5,6 +5,9 @@ https://github.com/hjltu/hjmqtt
 **more documents and instructions**
 https://github.com/OSA83/hjhome-doc
 
+**new version**
+see branch: testing
+
 # hjconnect
 https://github.com/hjltu/hjconnect
 <br> Remote telemetry system  for raspberry pi
