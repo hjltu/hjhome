@@ -1,0 +1,5 @@
+auto generated files:
+    homekit.json - homekit2mqtt accessory
+    homekit.sh - homekit bridge config
+    stat.db - hjmqtt database
+    user.db - hjsite database

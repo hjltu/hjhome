@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
-instance/
 hjsite/
 hjmqtt/
+hjhomekit/
+instance/*.*
