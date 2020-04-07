@@ -11,4 +11,4 @@ RUN npm install -g homekit2mqtt --unsafe-perm
 COPY ./setup /root/setup
 COPY ./hjhomekit /root/hjhomekit
 WORKDIR /root/hjhomekit
-CMD ["sh", "homekit-start.sh"]
+CMD ["python3", "homekit_start.py"]
