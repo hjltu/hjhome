@@ -28,7 +28,7 @@ serial = get_serial()
 def get_mac():
     sn = get_serial()
     mac = "AA:BB:"
-    for i in range(8, 15, 2):
+    for i in range(8, 16, 2):
         mac += str(sn[i])+str(sn[i+1])
         if i<13:
             mac += ':'
@@ -42,7 +42,7 @@ mac = get_mac()
 def get_pin():
     sn = get_serial()
     pin = ''
-    for i in range(8, 15):
+    for i in range(8, 16):
         pin += str(sn[i])
         if i == 10 or i == 12:
             pin += '-'

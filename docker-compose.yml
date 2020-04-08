@@ -1,1 +1,71 @@
-Version '3'
+version '3'
+
+networks:
+  default:
+    ipam:
+      driver: default
+      config:
+        - subnet: ${DOCKER_SUBNET}
+
+services:
+    hjmqtt:
+      container_name: hjmqtt
+      build:
+        context: .
+        dockerfile: Dockerfile.hjmqtt
+      networks:
+        - default:
+      ports:
+        - "1883:1883"
+      volumes:
+        - ./config:/root/config
+        - ./instance:/root/instance
+
+    hjhomekit:
+      container_name: hjhomekit
+      build:
+        context: .
+        dockerfile: Dockerfile.hjhomekit
+      networks:
+        - host
+      volumes:
+        - ./config:/root/config
+        - ./instance:/root/instance
+
+    hjnode-red:
+      container_name: hjnode-red
+      build:
+        context: .
+        dockerfile: Dockerfile.hjnode-red
+      networks:
+        - default
+      volumes:
+        - ./config:/root/config
+
+    hjsite:
+      container_name: hjsite
+      build:
+        context: .
+        dockerfile: Dockerfile.hjsite
+      networks:
+        - default
+      ports:
+        - "5000:5000"
+      volumes:
+        - ./config:/root/config
+        - ./instance:/root/instance
+
+    hjconnect:
+      container_name: hjconnect
+      build:
+        context: .
+        dockerfile: Dockerfile.hjconnect
+      networks:
+        - default
+      ports:
+        - "1883:18831"
+      volumes:
+        - ./config:/root/config
+        - ./instance:/root/instance
+        - ./share:/root/share
+

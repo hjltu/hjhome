@@ -22,34 +22,34 @@
 ### Build:
 >`docker build -f Docker.hjmqtt -t hjmqtt .`
 ### Run:
->`docker run -d --rm --name=hjmqtt -v "$(pwd)"/my/config:/root/config hjmqtt`
+>`docker run -d --rm --name=hjmqtt -v "$(pwd)"/config:/root/config hjmqtt`
 <br>or
-<br>`docker run -d --restart=always --name=hjmqtt -v "$(pwd)"/my/config:/root/config hjmqtt`
+<br>`docker run -d --restart=always --name=hjmqtt -v "$(pwd)"/config:/root/config hjmqtt`
 ## hjsite
 ### Build:
 >`docker build -f Docker.hjsite -t hjsite .`
 ### Run:
->`docker run -d --rm --name=hjsite -v "$(pwd)"/my/config:/root/config hjsite`
+>`docker run -d --rm --name=hjsite -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjsite`
 <br>or
-<br>`docker run -d --restart=always --name=hjsite -v "$(pwd)"/my/config:/root/config hjsite`
+<br>`docker run -d --restart=always --name=hjsite -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjsite`
 ## hjhomekit
 ### Build:
 >`docker build -f Docker.hjhomekit -t hjhomekit .`
 ### Run:
->`docker run -d --rm --name=hjhomekit -v "$(pwd)"/my/config:/root/config hjhomekit`
+>`docker run -d --rm --name=hjhomekit -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
 <br>or
-<br>`docker run -d --restart=always --name=hjhomekit -v "$(pwd)"/my/config:/root/config hjhomekit`
+<br>`docker run -d --restart=always --name=hjhomekit -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
 ## hjnode-red
 ### Build:
 >`docker build -f Docker.hjnode-red -t hjnode-red .`
 ### Run:
->`docker run -d --rm --name=hjnode-red -v "$(pwd)"/my/config:/root/config hjnode-red`
+>`docker run -d --rm --name=hjnode-red -v "$(pwd)"/config:/root/config hjnode-red`
 <br>or
-<br>`docker run -d --restart=always --name=hjnode-red -v "$(pwd)"/my/config:/root/config hjnode-red`
+<br>`docker run -d --restart=always --name=hjnode-red -v "$(pwd)"/config:/root/config hjnode-red`
 ## hjconnect
 ### Build:
 >`docker build -f Docker.hjconnect -t hjconnect .`
 ### Run:
->`docker run -d --rm --name=hjconnect -v "$(pwd)"/my/config:/root/config hjconnect`
+>`docker run -d --rm --name=hjconnect -v "$(pwd)"/config:/root/config hjconnect`
 <br>or
-<br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/my/config:/root/config hjconnect`
+<br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/config:/root/config hjconnect`
