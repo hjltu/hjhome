@@ -40,14 +40,14 @@ def get_mac():
 mac = get_mac()
 
 def get_pin():
-    sn = get_serial():
+    sn = get_serial()
     pin = ''
     for i in range(8, 15):
-    pin += str(sn[i])
-    if i == 10 or i == 12:
-        pin += '-'
+        pin += str(sn[i])
+        if i == 10 or i == 12:
+            pin += '-'
     print('pin',pin)
-    os.environ['HJ_PIN_NUMBER'] = pin$
+    os.environ['HJ_PIN_NUMBER'] = pin
     os.system("echo " + pin + " > ../instance/homekit.pin")
     return pin
 
