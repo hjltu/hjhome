@@ -5,17 +5,19 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: ${DOCKER_SUBNET}
+        - subnet: "192.168.5.0/24"
 
 services:
     hjmqtt:
-      image: hjhome
+      image: hj
       container_name: hjmqtt
       build:
         context: .
         dockerfile: Dockerfile.hj
+      restart: always
       networks:
-        - host
+        default:
+          ipv4_address: "192.168.5.2"
       volumes:
         - ./hjmqtt:/root/hjmqtt
         - ./setup:/root/setup
@@ -24,11 +26,12 @@ services:
       command: ["cd", "/root/hjmqtt", "&&", "python3", "hjmqtt.py"]
 
     hjhomekit:
-      image: hjhome
+      image: hj
       container_name: hjhomekit
       build:
         context: .
         dockerfile: Dockerfile.hj
+      restart: always
       networks:
         - host
       volumes:
@@ -39,27 +42,32 @@ services:
       command: ["cd", "/root/hjhomekit", "&&", "python3", "homekit-start.py"]
 
     hjnode-red:
-      image: hjhome
+      image: hj
       container_name: hjnode-red
       build:
         context: .
         dockerfile: Dockerfile.hj
+      restart: always
       networks:
-        - host
+        default:
+          ipv4_address: "192.168.5.4"
       ports:
+        - "1880:1880"
       volumes:
         - ./setup:/root/setup
         - ./config:/root/config
       command: ["node-red"]
 
     hjsite:
-      image: hjhome
+      image: hj
       container_name: hjsite
       build:
         context: .
         dockerfile: Dockerfile.hj
+      restart: always
       networks:
-        - default
+        default:
+          ipv4_address: "192.168.5.5"
       ports:
         - "5000:5000"
       volumes:
@@ -70,13 +78,15 @@ services:
       command: ["cd", "/root/hjsite", "&&", "python3", "app.py"]
 
     hjconnect:
-      image: hjhome
+      image: hj
       container_name: hjconnect
       build:
         context: .
         dockerfile: Dockerfile.hj
+      restart: always
       networks:
-        - host
+        default:
+          ipv4_address: "192.168.5.6"
       volumes:
         - ./hjconnect:/root/hjconnect
         - ./setup:/root/setup

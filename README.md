@@ -29,23 +29,23 @@
 ### Build:
 >`docker build -f Docker.hjsite -t hjsite .`
 ### Run:
->`docker run -d --rm --name=hjsite -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjsite`
+>`docker run -d --rm --name=hjsite -p 5000:5000 -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjsite`
 <br>or
-<br>`docker run -d --restart=always --name=hjsite -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjsite`
+<br>`docker run -d --restart=always --name=hjsite -p 5000:5000 -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjsite`
 ## hjhomekit
 ### Build:
 >`docker build -f Docker.hjhomekit -t hjhomekit .`
 ### Run:
->`docker run -d --rm --name=hjhomekit -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
+>`docker run -d --rm --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
 <br>or
-<br>`docker run -d --restart=always --name=hjhomekit -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
+<br>`docker run -d --restart=always --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
 ## hjnode-red
 ### Build:
 >`docker build -f Docker.hjnode-red -t hjnode-red .`
 ### Run:
->`docker run -d --rm --name=hjnode-red -v "$(pwd)"/config:/root/config hjnode-red`
+>`docker run -d --rm --name=hjnode-red -p 1880:1880 -v "$(pwd)"/config:/root/config hjnode-red`
 <br>or
-<br>`docker run -d --restart=always --name=hjnode-red -v "$(pwd)"/config:/root/config hjnode-red`
+<br>`docker run -d --restart=always --name=hjnode-red -p 1880:1880 -v "$(pwd)"/config:/root/config hjnode-red`
 ## hjconnect
 ### Build:
 >`docker build -f Docker.hjconnect -t hjconnect .`
