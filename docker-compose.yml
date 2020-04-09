@@ -9,63 +9,79 @@ networks:
 
 services:
     hjmqtt:
+      image: hjhome
       container_name: hjmqtt
       build:
         context: .
-        dockerfile: Dockerfile.hjmqtt
-      networks:
-        - default:
-      ports:
-        - "1883:1883"
-      volumes:
-        - ./config:/root/config
-        - ./instance:/root/instance
-
-    hjhomekit:
-      container_name: hjhomekit
-      build:
-        context: .
-        dockerfile: Dockerfile.hjhomekit
+        dockerfile: Dockerfile.hj
       networks:
         - host
       volumes:
+        - ./hjmqtt:/root/hjmqtt
+        - ./setup:/root/setup
         - ./config:/root/config
         - ./instance:/root/instance
+      command: ["cd", "/root/hjmqtt", "&&", "python3", "hjmqtt.py"]
+
+    hjhomekit:
+      image: hjhome
+      container_name: hjhomekit
+      build:
+        context: .
+        dockerfile: Dockerfile.hj
+      networks:
+        - host
+      volumes:
+        - ./hjhomekit:/root/hjhomekit
+        - ./setup:/root/setup
+        - ./config:/root/config
+        - ./instance:/root/instance
+      command: ["cd", "/root/hjhomekit", "&&", "python3", "homekit-start.py"]
 
     hjnode-red:
+      image: hjhome
       container_name: hjnode-red
       build:
         context: .
-        dockerfile: Dockerfile.hjnode-red
+        dockerfile: Dockerfile.hj
       networks:
-        - default
+        - host
+      ports:
       volumes:
+        - ./setup:/root/setup
         - ./config:/root/config
+      command: ["node-red"]
 
     hjsite:
+      image: hjhome
       container_name: hjsite
       build:
         context: .
-        dockerfile: Dockerfile.hjsite
+        dockerfile: Dockerfile.hj
       networks:
         - default
       ports:
         - "5000:5000"
       volumes:
+        - ./hjsite:/root/hjsite
+        - ./setup:/root/setup
         - ./config:/root/config
         - ./instance:/root/instance
+      command: ["cd", "/root/hjsite", "&&", "python3", "app.py"]
 
     hjconnect:
+      image: hjhome
       container_name: hjconnect
       build:
         context: .
-        dockerfile: Dockerfile.hjconnect
+        dockerfile: Dockerfile.hj
       networks:
-        - default
-      ports:
-        - "1883:18831"
+        - host
       volumes:
+        - ./hjconnect:/root/hjconnect
+        - ./setup:/root/setup
         - ./config:/root/config
         - ./instance:/root/instance
         - ./share:/root/share
+      command: ["cd", "/root/hjconnect", "&&", "python3", "hjconnect.py"]
 
