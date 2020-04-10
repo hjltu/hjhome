@@ -3,9 +3,12 @@
 rpi_serial.py
 """
 
-import os, sys
+import os, sys, socket
 
 DEFAULT_SN = 'default'
+SERIAL_PATH = "../instance/serial.rpi"
+MAC_PATH = "../instance/homekit.mac"
+PIN_PATH = "../instance/homekit.pin"
 
 def get_serial():
     # Extract rpi serial from cpuinfo fi
@@ -16,7 +19,7 @@ def get_serial():
                     sn = str(line[10:26])
                     print('serial number found:',sn)
                     os.environ['HJ_SERIAL'] = sn
-                    os.system("echo " + sn + " > ../instance/serial.rpi")
+                    os.system("echo " + sn + " > " + SERIAL_PATH)
                     return sn
             print('serial number not found in /proc/cpuinfo file')
             return DEFAULT_SN
@@ -34,7 +37,7 @@ def get_mac():
             mac += ':'
     print('mac',mac)
     os.environ['HJ_MAC_ADDR'] = mac
-    os.system("echo " + mac + " > ../instance/homekit.mac")
+    os.system("echo " + mac + " > " + MAC_PATH)
     return mac
 
 mac = get_mac()
@@ -48,10 +51,31 @@ def get_pin():
             pin += '-'
     print('pin',pin)
     os.environ['HJ_PIN_NUMBER'] = pin
-    os.system("echo " + pin + " > ../instance/homekit.pin")
+    os.system("echo " + pin + " > " + PIN_PATH)
     return pin
 
 pin = get_pin()
+
+def get_ip():
+    ip = "192.168.0.10"
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        #s.connect(('10.255.255.255', 1))
+        s.connect(('1.1.1.1', 1))
+        ip = s.getsockname()[0]
+        print("IP Address:", ip)
+    except:
+        print("IP address not found")
+    return ip
+
+ip = get_ip()
+
+def get_hostname():
+    hostname = socket.gethostname()
+    print("Host name:", hostname)
+    return hostname
+
+hostname = get_hostname()
 
 #if __name__ == "__main__":
 #    get_serial()

@@ -36,11 +36,13 @@ HOMEKIT_ACCESSORY_FILE = "homekit.json"
 MAC_FILE = "homekit.mac"
 PIN_FILE = "pin.code"
 # hjconnect
+ENCRYPTION = False
 REMOTE_MQTT_SERVER = 'test.mosquitto.org'
 REMOTE_MQTT_PORT = 1883
-# hjsite
-SMTP_SERVER = 'smtp.example.com'
+# email
+SMTP_SERVER = 'smtp.yandex.ru'
 SMTP_PORT = 465
 FROM_EMAIL = 'email@example.com'
 FROM_EMAIL_PASSWD = 'password'
-TO_EMAILS = ['email@example.org', 'email_2@example.org']
+TO_EMAILS = ['message-intellect@ya.ru', 'hjltu@ya.ru']
+# hjsite
