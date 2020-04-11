@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-hjsite.py
+hjhome.py
 
 Copyright (C) 2016  hjltu@ya.ru
 
@@ -26,7 +26,7 @@ DEALINGS IN THE SOFTWARE.
 """
 
 # hjmqtt
-MQTT_SERVER = '192.168.5.1'
+MQTT_SERVER = '172.17.0.1'
 VERSION = '5-Apr-20'
 INSTANCE_DIR = '../instance'
 SETUP_DIR = '../setup'
