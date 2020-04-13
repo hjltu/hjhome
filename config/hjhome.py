@@ -25,11 +25,15 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 """
 
+# knx
+# BAOS IP addr = 192.168.0.40
+# iport
+# iPort IP addr = 192.168.0.20
 # hjmqtt
-MQTT_SERVER = '172.17.0.1'
-VERSION = '5-Apr-20'
-INSTANCE_DIR = '../instance'
-SETUP_DIR = '../setup'
+MQTT_SERVER = "172.17.0.1"
+VERSION = "5-Apr-20"
+INSTANCE_DIR = "../instance"
+SETUP_DIR = "../setup"
 # hjhomekit
 # TODO HOMEKIT_ENABLE = True
 HOMEKIT_NAME = "hjhome"
@@ -38,14 +42,14 @@ MAC_FILE = "homekit.mac"
 PIN_FILE = "pin.code"
 # hjconnect
 ENCRYPTION = False
-REMOTE_MQTT_SERVER = 'test.mosquitto.org'
+REMOTE_MQTT_SERVER = "test.mosquitto.org"
 REMOTE_MQTT_PORT = 1883
 # email
-SMTP_SERVER = 'smtp.yandex.ru'
+SMTP_SERVER = "smtp.yandex.ru"
 SMTP_PORT = 465
-FROM_EMAIL = 'email@yandex.ru'
-FROM_EMAIL_PASSWD = 'password'
-TO_EMAILS = ['message-intellect@ya.ru', 'hjltu@ya.ru']
+FROM_EMAIL = "email@yandex.ru"
+FROM_EMAIL_PASSWD = "password"
+TO_EMAILS = ["message-intellect@ya.ru", "hjltu@ya.ru"]
 # homeassistant
 HASS_ENABLE = False
 HASS_TZ = "Asia/Yekaterinburg"
