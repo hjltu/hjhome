@@ -1,0 +1,4 @@
+Homeassistant config
+
+# docker example
+docker run --init -d --name="hass" -e "TZ=Asia/Yekaterinburg" -v "$(pwd)"/hass:/config -p 8123:8123 homeassistant/raspberrypi3-homeassistant:stable
