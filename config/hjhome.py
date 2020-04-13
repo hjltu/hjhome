@@ -31,6 +31,7 @@ VERSION = '5-Apr-20'
 INSTANCE_DIR = '../instance'
 SETUP_DIR = '../setup'
 # hjhomekit
+# TODO HOMEKIT_ENABLE = True
 HOMEKIT_NAME = "hjhome"
 HOMEKIT_ACCESSORY_FILE = "homekit.json"
 MAC_FILE = "homekit.mac"
@@ -42,7 +43,10 @@ REMOTE_MQTT_PORT = 1883
 # email
 SMTP_SERVER = 'smtp.yandex.ru'
 SMTP_PORT = 465
-FROM_EMAIL = 'email@example.com'
+FROM_EMAIL = 'email@yandex.ru'
 FROM_EMAIL_PASSWD = 'password'
 TO_EMAILS = ['message-intellect@ya.ru', 'hjltu@ya.ru']
-# hjsite
+# homeassistant
+HASS_ENABLE = False
+HASS_TZ = "Asia/Yekaterinburg"
+HASS_WEB_PORT = 8123

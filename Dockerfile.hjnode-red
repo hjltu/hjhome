@@ -10,5 +10,6 @@ WORKDIR /root/.node-red
 RUN npm install -g node-red-dashboard \
     node-red-contrib-sonos node-red-contrib-knx
 COPY ./setup/ /root/setup
-WORKDIR /root
-CMD ["node-red-start.sh"]
+COPY ./hjnode-red/ /root/hjnode-red
+WORKDIR /root/hjnode-red
+CMD ["sh", "node-red-start.sh"]

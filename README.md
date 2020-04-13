@@ -22,34 +22,34 @@
 ### Build:
 >`docker build -f Dockerfile.hjmqtt -t hjmqtt .`
 ### Run:
->`docker run -d --rm --name=hjmqtt -v "$(pwd)"/config:/root/config hjmqtt`
+>`docker run --rm --name=hjmqtt -v "$(pwd)"/config:/root/config hjmqtt`
 <br>or
 <br>`docker run -d --restart=always --name=hjmqtt -v "$(pwd)"/config:/root/config hjmqtt`
 ## hjsite
 ### Build:
 >`docker build -f Dockerfile.hjsite -t hjsite .`
 ### Run:
->`docker run -d --rm --name=hjsite -p 5000:5000 -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v /var/run/docker.sock:/var/run/docker.sock hjsite`
+>`docker run --rm --name=hjsite -p 5000:5000 -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v /var/run/docker.sock:/var/run/docker.sock hjsite`
 <br>or
 <br>`docker run -d --restart=always --name=hjsite -p 5000:5000 -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v /var/run/docker.sock:/var/run/docker.sock hjsite`
 ## hjhomekit
 ### Build:
 >`docker build -f Dockerfile.hjhomekit -t hjhomekit .`
 ### Run:
->`docker run -d --rm --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
+>`docker run --rm --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
 <br>or
 <br>`docker run -d --restart=always --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
 ## hjnode-red
 ### Build:
 >`docker build -f Dockerfile.hjnode-red -t hjnode-red .`
 ### Run:
->`docker run -d --rm --name=hjnode-red -p 1880:1880 -v "$(pwd)"/config:/root/config hjnode-red`
+>`docker run --rm --name=hjnode-red -p 1880:1880 -v "$(pwd)"/config:/root/config hjnode-red`
 <br>or
 <br>`docker run -d --restart=always --name=hjnode-red -p 1880:1880 -v "$(pwd)"/config:/root/config hjnode-red`
 ## hjconnect
 ### Build:
 >`docker build -f Dockerfile.hjconnect -t hjconnect .`
 ### Run:
->`docker run -d --rm --name=hjconnect -v "$(pwd)"/config:/root/config hjconnect`
+>`docker run --rm --name=hjconnect -v "$(pwd)"/config:/root/config hjconnect`
 <br>or
 <br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/config:/root/config hjconnect`
