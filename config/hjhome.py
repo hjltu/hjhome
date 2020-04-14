@@ -25,32 +25,39 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 """
 
-# knx
-# BAOS IP addr = 192.168.0.40
-# iport
-# iPort IP addr = 192.168.0.20
-# hjmqtt
-MQTT_SERVER = "172.17.0.1"
 VERSION = "5-Apr-20"
 INSTANCE_DIR = "../instance"
 SETUP_DIR = "../setup"
+# rpi
+RPI_IP = "192.168.0.10"
+# knx
+BAOS_IP = "192.168.0.40"
+# iport
+IPORT_IP = "192.168.0.20"
+# hjmqtt
+MQTT_SERVER = "172.17.0.1"
 # hjhomekit
-# TODO HOMEKIT_ENABLE = True
 HOMEKIT_NAME = "hjhome"
 HOMEKIT_ACCESSORY_FILE = "homekit.json"
 MAC_FILE = "homekit.mac"
 PIN_FILE = "pin.code"
 # hjconnect
-ENCRYPTION = False
-REMOTE_MQTT_SERVER = "test.mosquitto.org"
-REMOTE_MQTT_PORT = 1883
+CONN_ENCRYPTION = False
+CONN_CA_CRT = "ca.crt"  # /root/config/
+CONN_REMOTE_SERVER = "test.mosquitto.org"
+CONN_REMOTE_PORT = 1883
+CONN_LOCAL_PORT = 1883
+CONN_GAP = 399
+CONN_RTOPIC = "/hjconnect/"
+CONN_LTOPIC = "/hjlocal/"
+CONN_TMPDIR = "temp"
+CONN_CHUNKSIZE = 9999
 # email
 SMTP_SERVER = "smtp.yandex.ru"
 SMTP_PORT = 465
-FROM_EMAIL = "email@yandex.ru"
+FROM_EMAIL = "message-intellect@ya.ru"
 FROM_EMAIL_PASSWD = "password"
 TO_EMAILS = ["message-intellect@ya.ru", "hjltu@ya.ru"]
 # homeassistant
-HASS_ENABLE = False
 HASS_TZ = "Asia/Yekaterinburg"
 HASS_WEB_PORT = 8123
