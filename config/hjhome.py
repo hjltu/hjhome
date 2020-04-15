@@ -52,6 +52,7 @@ CONN_RTOPIC = "/hjconnect/"
 CONN_LTOPIC = "/hjlocal/"
 CONN_TMPDIR = "temp"
 CONN_CHUNKSIZE = 9999
+CONN_VERBOSE = True
 # email
 SMTP_SERVER = "smtp.yandex.ru"
 SMTP_PORT = 465
