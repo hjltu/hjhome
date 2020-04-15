@@ -38,7 +38,7 @@
 <br>or
 <br>`docker run -d --restart=always --name=hjsite -p 5000:5000 -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v /var/run/docker.sock:/var/run/docker.sock hjsite`
 <br>**Check:**
-<br>http://192.168.0.10:5000
+<br>http://192.168.0.10:5000    # where 192.168.0.10 - raspberry pi IP address
 ## hjhomekit
 ### Build:
 >`docker build -f Dockerfile.hjhomekit -t hjhomekit .`
