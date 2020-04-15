@@ -38,7 +38,7 @@
 <br>or
 <br>`docker run -d --restart=always --name=hjsite -p 5000:5000 -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v /var/run/docker.sock:/var/run/docker.sock hjsite`
 <br>**Check:**
-<br>http://{RPI_IP_ADDR}:5000
+<br>http://192.168.0.10:5000
 ## hjhomekit
 ### Build:
 >`docker build -f Dockerfile.hjhomekit -t hjhomekit .`
@@ -47,7 +47,7 @@
 <br>or
 <br>`docker run -d --restart=always --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
 <br>**Check:**
-<br>http://{RPI_IP_ADDR}:51888
+<br>http://192.168.0.10:51888
 ## hjnode-red
 ### Build:
 >`docker build -f Dockerfile.hjnode-red -t hjnode-red .`
@@ -56,7 +56,7 @@
 <br>or
 <br>`docker run -d --restart=always --name=hjnode-red -p 1880:1880 -v "$(pwd)"/config:/root/config hjnode-red`
 <br>**Check:**
-<br>http://{RPI_IP_ADDR}:1880
+<br>http://192.168.0.10:1880
 ## hjconnect
 ### Build:
 >`docker build -f Dockerfile.hjconnect -t hjconnect .`
