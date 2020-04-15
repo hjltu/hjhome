@@ -35,7 +35,7 @@ BAOS_IP = "192.168.0.40"
 # iport
 IPORT_IP = "192.168.0.20"
 # hjmqtt
-MQTT_SERVER = "172.17.0.1"
+MQTT_SERVER = "172.17.0.1"  # docker network, rpi localhost
 # hjhomekit
 HOMEKIT_NAME = "hjhome"
 HOMEKIT_ACCESSORY_FILE = "homekit.json"
@@ -47,12 +47,12 @@ CONN_CA_CRT = "ca.crt"  # /root/config/
 CONN_REMOTE_SERVER = "test.mosquitto.org"
 CONN_REMOTE_PORT = 1883
 CONN_LOCAL_PORT = 1883
-CONN_GAP = 399
-CONN_RTOPIC = "/hjconnect/"
-CONN_LTOPIC = "/hjlocal"
-CONN_TMPDIR = "temp"
+CONN_GAP = 399                  # status message interval, sec
+CONN_RTOPIC = "/hjconnect/"     # topic prefix for remote server
+CONN_LTOPIC = "/hjlocal"        # topic prefix for local server
+CONN_TMPDIR = "temp"            # download, upload dir
 CONN_CHUNKSIZE = 9999
-CONN_VERBOSE = True
+CONN_VERBOSE = True             # logging
 # email
 SMTP_SERVER = "smtp.yandex.ru"
 SMTP_PORT = 465

@@ -16,8 +16,11 @@
 
 **Configuration file:**
 <br>config/hjhome.py
-<br>MQTT_SERVER: mqtt server IP address
-<br>VERSION: version string
+<br>email seettings:
+<br>SMTP_SERVER, SMTP_PORT - email server settings
+<br>FROM_EMAIL, FROM_EMAIL_PASSWD email account settings
+<br>TO_EMAILS - list of address to receive registration email
+
 ## hjmqtt
 ### Build:
 >`docker build -f Dockerfile.hjmqtt -t hjmqtt .`
