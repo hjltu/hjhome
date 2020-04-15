@@ -10,8 +10,5 @@ RUN apk --no-cache add py3-setuptools py3-psutil \
     && pip3 install --upgrade werkzeug==0.15.2
 COPY ./hjconnect /root/hjconnect
 COPY ./setup /root/setup
-COPY ./config /root/config
-COPY ./instance /root/instance
-COPY . /root/hjhome
 WORKDIR /root/hjconnect
 CMD [ "python3", "hjconnect.py" ]

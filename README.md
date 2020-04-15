@@ -50,6 +50,6 @@
 ### Build:
 >`docker build -f Dockerfile.hjconnect -t hjconnect .`
 ### Run:
->`docker run --rm --name=hjconnect -v "$(pwd)"/config:/root/config hjconnect`
+>`docker run --rm --name=hjconnect -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v "$(pwd)"/hjhome:/root/hjhome hjconnect`
 <br>or
-<br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/config:/root/config hjconnect`
+<br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v "$(pwd)"/hjhome:/root/hjhome hjconnect`
