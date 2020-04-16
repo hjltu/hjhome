@@ -35,7 +35,8 @@ BAOS_IP = "192.168.0.40"
 # iport
 IPORT_IP = "192.168.0.20"
 # hjmqtt
-MQTT_SERVER = "172.17.0.1"  # docker network, rpi localhost
+# docker network, rpi localhost
+MQTT_SERVER = "172.17.0.1"
 # hjhomekit
 HOMEKIT_NAME = "hjhome"
 HOMEKIT_ACCESSORY_FILE = "homekit.json"
