@@ -43,9 +43,9 @@
 ### Build:
 >`docker build -f Dockerfile.hjhomekit -t hjhomekit .`
 ### Run:
->`docker run --rm --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
+>`docker run --rm --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v "$(pwd)"/hass:/root/hass hjhomekit`
 <br>or
-<br>`docker run -d --restart=always --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjhomekit`
+<br>`docker run -d --restart=always --name=hjhomekit --network=host -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v "$(pwd)"/hass:/root/hass hjhomekit`
 <br>**Check:**
 <br>http://192.168.0.10:51888
 ## hjnode-red
@@ -61,10 +61,17 @@
 ### Build:
 >`docker build -f Dockerfile.hjconnect -t hjconnect .`
 ### Run:
->`docker run --rm --name=hjconnect -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v "$(pwd)"/hjhome:/root/hjhome hjconnect`
+>`docker run --rm --name=hjconnect -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjconnect`
 <br>or
-<br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance -v "$(pwd)"/hjhome:/root/hjhome hjconnect`
+<br>`docker run -d --restart=always --name=hjconnect -v "$(pwd)"/config:/root/config -v "$(pwd)"/instance:/root/instance hjconnect`
 <br>**Check:**
 <br>`mosquitto_sub -t /# -v`
 <br>or
 <br>`mosquitto_sub -h test.mosquitto.org -t /hjconnect/# -v`
+## homeassistant
+### Run:
+>`docker run --init --rm --name=hass -p 8123:8123 -v "$(pwd)"/hass:/config homeassistant/raspberrypi3-homeassistant:stable`
+<br>or
+<br>`docker run --init -d --restart=always --name=hass -p 8123:8123 -v "$(pwd)"/hass:/config homeassistant/raspberrypi3-homeassistant:stable`
+<br>**Check and setup:**
+<br>http://192.168.0.10:8123
