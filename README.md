@@ -21,6 +21,7 @@ https://github.com/hjltu/sima
 # my home automation devices
 <br>
 <b>1. wifi controller(wemos)</b>
+<b>https://github.com/hjltu/wemos-wifi-controller
 <br>https://github.com/hjltu/hjmqtt/tree/master/arduino
 <br>https://github.com/hjltu/hjmqtt/tree/master/arduino/doc
 <br>https://youtu.be/PPkzPMNiBQY
